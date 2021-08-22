@@ -1,0 +1,21 @@
+query GetMyBasicDetails {
+  me {
+    name
+  }
+}
+
+query GetMyWallets {
+  myWallets {
+    items {
+      id
+      currency
+      balance
+    }
+  }
+}
+
+mutation OpenWallet($currency: CurrencyCode!) {
+  openWallet(input: { currency: $currency }) {
+    id
+  }
+}

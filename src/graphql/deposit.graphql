@@ -1,0 +1,24 @@
+mutation DepositCard($amount: Int!, $walletId: ID!) {
+  depositCard(input: { amount: $amount, walletId: $walletId }) {
+    depositId
+    proceedUrl
+    redirectUrl
+  }
+}
+
+mutation DepositMobileMoney($amount: Int!, $walletId: ID!) {
+  depositMobileMoney(input: { amount: $amount, walletId: $walletId }) {
+    depositId
+    proceedUrl
+    redirectUrl
+  }
+}
+
+mutation DepositStatus($depositId: ID!, $transactionId: ID!) {
+  depositStatus(input:{depositId: $depositId, transactionId: $transactionId}) {
+    completed
+    settledAmount
+    chargedAmount
+    fees
+  }
+}

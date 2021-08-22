@@ -1,0 +1,6 @@
+overwrite: true
+schema: https://api.dijiapp.dev/graphql
+generates:
+  src/graphql/generated/schema.json:
+    plugins:
+      - introspection
